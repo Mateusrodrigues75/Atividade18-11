@@ -20,6 +20,7 @@ namespace Exercicio3
             Console.Write("Digite sua Idade: ");
             idade = int.Parse(Console.ReadLine());
             while(idade<0 || idade>150){
+                Console.Write("Idade deve ser entre 0 e 150!");
                 Console.Write("Digite sua Idade novamente: ");
                 idade = int.Parse(Console.ReadLine());
             }
@@ -34,28 +35,10 @@ namespace Exercicio3
             
             Console.Write("Digite a letra correspondente a seu estado civil-\n Solteiro(a) - (S)\n Casado(a) - (C)\n Viúvo(a) - (V)\n Divorciado(a) - (D) : ");
             ecivil = Console.ReadLine();
-            switch(ecivil){
-                case "S":
-                Console.WriteLine("Seu Estado Civil é de Solteiro(a).");
-                break;
-                
-                case "C":
-                Console.WriteLine("Seu Estado Civil é de Casado(a).");
-                break;
-                
-                case "V":
-                Console.WriteLine("Seu Estado Civil é de Viúvo(a).");
-                break;
-                
-                case "D":
-                Console.WriteLine("Seu Estado Civil é de Divorciado(a).");
-                break;
-
-                default:
+            while(ecivil!= "S" && ecivil != "C" && ecivil != "V" && ecivil != "D"){
                 Console.WriteLine("--------------ERRO --------------");
                 Console.Write("Digite a letra correspondente a seu estado civil : ");
                 ecivil = Console.ReadLine();
-                break;
             }
             Console.WriteLine("FIM");
 
